@@ -98,7 +98,7 @@
           bottom: 50px;
           padding: 15px 30px;
           border: 1px solid $text-color;
-          border-radius: 100px;
+          border-radius: 10;
           @include flexCenter();
           transition: 0.25s ease;
           span {

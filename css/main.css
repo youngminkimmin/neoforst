@@ -36,7 +36,7 @@
 
 #main #product .list li { position: relative; }
 
-#main #product .list li a { position: absolute; right: 50px; bottom: 50px; padding: 15px 30px; border: 1px solid #111111; border-radius: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: 0.25s ease; transition: 0.25s ease; }
+#main #product .list li a { position: absolute; right: 50px; bottom: 50px; padding: 15px 30px; border: 1px solid #111111; border-radius: 10; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: 0.25s ease; transition: 0.25s ease; }
 
 #main #product .list li a span { margin-left: 20px; color: #1dcb5d; }
 
