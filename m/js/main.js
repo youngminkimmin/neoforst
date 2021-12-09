@@ -30,12 +30,6 @@ const newsSlider = new Swiper("#news, contents", {
   spaceBetween: 20,
 });
 
-function add(a, b) {
-  return a + b * 2 + 10;
-}
-const sum = add(20, 30);
-console.log(sum);
-
 const btnAll = document.querySelector("#header .all");
 const gnb = document.querySelector("#gnb");
 const btnClose = document.querySelector("#gnb .close");
@@ -46,6 +40,36 @@ btnAll.addEventListener("click", function () {
 btnClose.addEventListener("click", () => {
   console.log("close");
   gnb.classList.remove("on");
+});
+
+const gnbList = $("#gnb .list > li");
+const depth01 = gnbList.children("a").not(".only");
+console.log(depth01);
+depth01.on("click", function (e) {
+  e.preventDefault();
+  $(this).siblings(".depth02").stop().slideToggle();
+  $(this).parent().siblings("li").find(".depth02").stop().slideUp();
+});
+
+const header = $("#header");
+const btnTop = $(".btnTop");
+$(window).on("scroll", function () {
+  const st = $(window).scrollTop();
+  if (st > 0) {
+    if (!header.hasClass("scroll")) {
+      header.addClass("scroll");
+    }
+    if (!btnTop.hasClass("on")) {
+      btnTop.addClass("on");
+    }
+  } else {
+    if (header.hasClass("scroll")) {
+      header.removeClass("scroll");
+    }
+    if (btnTop.hasClass("on")) {
+      btnTop.removeClass("on");
+    }
+  }
 });
 
 //f(x,y) = x+y*3; f(3,5) = 18

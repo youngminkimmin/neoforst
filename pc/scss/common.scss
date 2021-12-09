@@ -1,0 +1,31 @@
+@import "vars";
+@import "mixins";
+
+.checkbox {
+  input {
+    display: none;
+  }
+  input:checked ~ .label:before {
+    background: $main-color;
+    border: none;
+    color: #fff;
+    content: "\2713";
+    @include longShadow(darken($main-color, 20), right, 10);
+  }
+  .label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    &:before {
+      content: "";
+      @include flexCenter();
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+      border: 2px solid $gray-color;
+      border-radius: 3px;
+      margin-right: 6px;
+      box-sizing: border-box;
+    }
+  }
+}

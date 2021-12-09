@@ -117,3 +117,13 @@
 .testTable th .emoji { font-size: 40px; }
 
 .testTable td { background-color: #00f; padding: 30px 0; }
+
+.popup { position: fixed; z-index: 100000; left: 50px; top: 100px; background-color: #fff; display: none; -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); }
+
+.popup .contents { padding: 50px; }
+
+.popup .btns { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 10px; }
+
+.popup .btns button { padding: 10px 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-color: blue; color: #fff; border-radius: 5px; }
+
+.popup .btns button.oneday { background-color: #111; color: #fff; }
